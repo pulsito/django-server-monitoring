@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+<div class="container">
+<ol>
+    <table class="table">
+    <tr>
+        <th><h3 class="display-6">Servers</h3></th>
+    </tr>
+        {% for server in servers %}
+            <tr>
+                <td><a class="text-decoration-none link-secondary" style="font-size: 20px" href="/server/{{ server.id }}">{{ server.server_name }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</ol>
+</div>
+{% endblock %}
